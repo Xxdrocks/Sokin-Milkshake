@@ -1,14 +1,16 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './section/Hero'
-import ProductSection from './section/ProductSection'
+import ChocolateSection from './section/ChocolateSection'
+import Variant from './section/Variant'
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Hero />
-      <ProductSection />
+      <Variant />
+      <ChocolateSection />
     </div>
   )
 }
