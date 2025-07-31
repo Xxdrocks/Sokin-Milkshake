@@ -4,8 +4,8 @@ const navLink = [
         link : "#home"
     },
     {
-        name : "Variant",
-        link : "#variant"
+        name : "Products",
+        link : "#products"
     },
     {
         name : "Contact",
@@ -13,7 +13,7 @@ const navLink = [
     }
 ]
 
-const products = [
+const chocolate = [
     {
         name : "Chocolate Milkshake",
         desc : "Lorem ipsum dolor ",
@@ -50,7 +50,7 @@ const products = [
 
 export {
     navLink,
-    products,
+    chocolate
 }
 
 
