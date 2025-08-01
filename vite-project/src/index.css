@@ -56,6 +56,14 @@ body {
   background-repeat: no-repeat;
 }
 
+.strawbg {
+  background-color: antiquewhite;
+  background-image: url("/images/strawberry.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .variant {
   filter: blur(5px);
   transition: all 0.3s ease-in-out;
