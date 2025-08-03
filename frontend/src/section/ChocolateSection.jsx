@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { use } from 'react'
 import { chocolate } from '../constant'
 
 const ChocolateSection = () => {
+
     return (
         <section className='flex justify-center md:h-lvh chocobg items-center md:mt-20' id='products'>
             <div className='flex justify-center flex-col mt-15 md:flex-row gap-10 left-0'>
@@ -26,9 +27,9 @@ const ChocolateSection = () => {
                         </div>
                         <div>
                             <div className='mt-4'>
-                                <button className='mb-[-20px] px-5 py-1 rounded-full cursor-pointer bg-black text-white font-mona text-sm '>
+                                <a className='mb-[-20px] px-5 py-1 rounded-full cursor-pointer bg-black text-white font-mona text-sm '>
                                     Buy Now
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
