@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './section/Hero'
 import ChocolateSection from './section/ChocolateSection'
 import Strawberrysection from './section/Strawberrysection'
+import Contact from './section/Contact'
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Hero />
       <ChocolateSection />
       <Strawberrysection />
+      <Contact />
     </div>
   )
 }
