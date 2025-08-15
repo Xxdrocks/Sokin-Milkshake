@@ -6,9 +6,9 @@ const Strawberrysection = () => {
     <section className='flex justify-center md:h-lvh strawbg items-center ' id='products'>
             <div className='flex justify-center flex-col mt-15 md:flex-row gap-10 left-0'>
                 {strawberry.slice(0,3).map(({ name, desc, imgPath, price }) => (
-                    <div className='bg-[#fff2eb4b] flex items-center flex-col  w-[10rem] rounded-2xl glassy mt-10'>
+                    <div data-aos="fade-up" data-aos-duration="900" className='bg-[#fff2eb4b] flex items-center flex-col  w-[10rem] rounded-2xl glassy mt-10'>
                         <div className='bg-[#ffdcdc6b] rounded-xl'>
-                            <div className='mt-[-3rem]'>
+                            <div className='mt-[-3rem]' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-anchor-placement="center-center">
                                 <img src={imgPath} alt={name} className='w-full h-full object-contain' />
                             </div>
                         </div>

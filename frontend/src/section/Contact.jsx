@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useRef } from "react";
-
+import swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -31,17 +31,31 @@ const Contact = () => {
             );
 
             setForm({ name: "", email: "", message: "" });
+            Swal.fire({
+                title: "Success!",
+                text: "Your message has been sent successfully.",
+                icon: "success",
+                confirmButtonColor: "#F5BABB",
+            });
         } catch (error) {
-            console.error("EmailJS Error:", error); // Optional: show toast
+            console.error("EmailJS Error:", error);
+
+            Swal.fire({
+                title: "Error!",
+                text: "Failed to send your message. Please try again.",
+                icon: "error",
+                confirmButtonColor: "#F5BABB",
+            });
         } finally {
-            setLoading(false); // Always stop loading, even on error
+            setLoading(false);
         }
     };
 
+
     return (
-        <section id="contact">
-            <div className="w-full h-full md:px-10 px-5 mt-50">
-                <div className=" bg-pink-300 text-black py-8 px-6 rounded-lg max-w-xl">
+        <section id="contact" className="flex justify-center items-center">
+            <div data-aos="fade-right" data-aos-duration="900" className="w-full h-full md:px-10 px-5 mt-50">
+                <div className=" bg-[#FFF5F2] text-black py-8 px-6 rounded-lg max-w-xl">
                     <form
                         ref={formRef}
                         onSubmit={handleSubmit}
@@ -59,7 +73,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 placeholder="What's your good name?"
                                 required
-                                className=" text-white placeholder:text-gray-400 px-4 py-3 rounded-lg outline-none border  focus:border-blue-500 transition-all"
+                                className="text-black placeholder:text-gray-400 px-4 py-3 rounded-lg outline-none border  border-[#F5BABB] transition-all"
                             />
                         </div>
 
@@ -75,7 +89,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 placeholder="What's your email address?"
                                 required
-                                className=" text-white placeholder:text-gray-400 px-4 py-3 rounded-lg outline-none border border-transparent border-white transition-all"
+                                className=" text-black placeholder:text-gray-400 px-4 py-3 rounded-lg outline-none border border-[#F5BABB] transition-all"
                             />
                         </div>
 
@@ -91,19 +105,27 @@ const Contact = () => {
                                 placeholder="How can I help you?"
                                 required
                                 rows="4"
-                                className=" text-white placeholder:text-gray-400 px-4 py-3 rounded-lg outline-none border border-transparent focus:border-blue-500 transition-all resize-none"
+                                className=" text-black placeholder:text-gray-400 px-4 py-3 rounded-lg outline-none border border-[#F5BABB]  transition-all resize-none"
                             />
                         </div>
 
                         <button
                             type="submit"
                             disabled={loading}
-                            className="bg-[#d6ecff] text-black font-semibold py-3 rounded-lg hover:bg-[#bde0ff] transition-all"
+                            className="bg-[#F5BABB] text-black font-semibold py-3 rounded-lg hover:bg-[#fba4a6] transition-all"
                         >
                             {loading ? "Sending..." : "SEND MESSAGE"}
                         </button>
                     </form>
                 </div>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="300" className="w-full h-full">
+                <img
+                    src="/images/milkshake/header.png"
+                    alt="contact"
+                    className="w-full h-full object-cover"
+                />
             </div>
         </section>
 

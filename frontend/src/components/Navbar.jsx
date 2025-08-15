@@ -3,7 +3,7 @@ import { navLink } from "../constant";
 
 const Navbar = () => {
     return (
-        <nav className='fixed top-5 left-0 right-0 z-40'>
+        <nav className='fixed top-5 left-0 right-0 z-40' data-aos="fade-down" data-aos-duration="1000">
             <div className='flex justify-center items-center gap-1 font-poppins text-xs glassy bg-[#ebebeb62] navbar mx-auto w-[11rem] p-2 rounded-full'>
                 <div>
                     <img src='/images/logo.png' alt='logo' className='w-4 text' />
