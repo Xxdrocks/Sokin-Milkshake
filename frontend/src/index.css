@@ -22,6 +22,14 @@ body {
   box-sizing: border-box;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; 
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;    
+}
+
 .glassy {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);

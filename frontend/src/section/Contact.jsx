@@ -120,7 +120,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="300" className="w-full h-full">
+            <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="300"w className="w-full h-full">
                 <img
                     src="/images/milkshake/header.png"
                     alt="contact"

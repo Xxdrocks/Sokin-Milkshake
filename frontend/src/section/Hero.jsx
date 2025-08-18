@@ -7,7 +7,7 @@ const Hero = () => {
         <div className='flex flex-col md:w-3/11 w-screen  md:ml-40 ml-5'>
           <div className='' data-aos="fade-right" data-aos-duration="1000">
             <h1 className=' md:text-3xl text-2xl'> Milkshake for the whole people <span className='font-bold'>for every people</span></h1>
-          </div>  
+          </div>
           <div className='flex text-xs mt-2' data-aos="fade-right" data-aos-duration="1100">
             <h1 className='p-1 text-gray-600'>Explore</h1>
             <div className='p-1 gap-1 flex'>
@@ -16,9 +16,11 @@ const Hero = () => {
               <a className='cursor-pointer px-1 border-1 text-blue-300 border-blue-300 rounded-full my-auto'>Topping's</a>
             </div>
           </div>
-          <button data-aos="fade-right" data-aos-duration="1200" className='w-1/4 md:w-1/3 mt-5 md:p-1 text-xs rounded-full bg-black text-white glassy cursor-pointer button'>
-            Explore now
-          </button>
+          <div data-aos="fade-right" data-aos-duration="1200">
+            <button className='w-1/4 md:w-1/3 mt-5 md:p-1 text-xs rounded-full bg-black text-white glassy cursor-pointer button'>
+              Explore now
+            </button>
+          </div>
         </div>
         <div className='md:w-5/11 h-auto' data-aos="fade-left" data-aos-duration="1200" data-aos-offset="300">
           <img src='/images/milkshake/header.png' alt='hero' />
