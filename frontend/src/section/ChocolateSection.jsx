@@ -21,7 +21,7 @@ const ChocolateSection = () => {
             <button onClick={() => scroll('left')} className="bg-[#541212] z-10 text-white p-2 mx-5 rounded-full lg:flex hidden cursor-pointer">
                 <img src='/images/left.png' alt='left' className='w-4' />
             </button>
-            <div ref={scrollRef} className='xl:w-[1000px] flex justify-center flex-col mt-15 xl:flex-row gap-10 overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory overflow-y-hidden'>
+            <div ref={scrollRef} className='xl:w-[1000px] flex justify-center flex-col mt-15 xl:flex-row gap-10 overflow-x-auto overflow-y-visible scrollbar-hide scroll-smooth snap-x snap-mandatory py-30'>
                 {chocolate.map(({ name, desc, imgPath, price }, product) => (
                     <div key={product} onClick={() => setIsClicked(product)} className={`
                             bg-[#d2c1b659] flex items-center flex-col flex-shrink-0 rounded-2xl glassy mt-10 cursor-pointer transition-all duration-500 ease-in-out

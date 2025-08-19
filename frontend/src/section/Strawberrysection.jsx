@@ -1,14 +1,34 @@
-import React from 'react'
+import React, { use, useRef, useState } from 'react'
 import { strawberry } from '../constant'
 
-const Strawberrysection = () => {
-  return (
-    <section className='flex justify-center md:h-lvh strawbg items-center ' id='products'>
-            <div className='flex justify-center flex-col mt-15 md:flex-row gap-10 left-0'>
-                {strawberry.slice(0,3).map(({ name, desc, imgPath, price }) => (
-                    <div data-aos="fade-up" data-aos-duration="900" className='bg-[#fff2eb4b] flex items-center flex-col  w-[10rem] rounded-2xl glassy mt-10'>
-                        <div className='bg-[#ffdcdc6b] rounded-xl'>
-                            <div className='mt-[-3rem]' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-anchor-placement="center-center">
+const StrawberrySection = () => {
+
+    const scrollRef = useRef(null);
+
+    const scroll = (direction) => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({
+                left: direction === 'left' ? -200 : 200,
+                behavior: 'smooth',
+            });
+        }
+    };
+
+    const [isClicked, setIsClicked] = useState(null);
+
+    return (
+        <section className='flex justify-center h-screen strawbg items-center' id='products'>
+            <button onClick={() => scroll('left')} className="bg-[#541212] z-10 text-white p-2 mx-5 rounded-full lg:flex hidden cursor-pointer">
+                <img src='/images/left.png' alt='left' className='w-4' />
+            </button>
+            <div ref={scrollRef} className='xl:w-[1000px] flex justify-center flex-col mt-15 xl:flex-row gap-10 overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory'>
+                {strawberry.map(({ name, desc, imgPath, price }, product) => (
+                    <div key={product} onClick={() => setIsClicked(product)} className={`
+                            bg-[#d2c1b659] flex items-center flex-col flex-shrink-0 rounded-2xl glassy mt-10 cursor-pointer transition-all duration-500 ease-in-out
+                            ${isClicked === product ? "scale-110 w-[12rem] shadow-2xl" : "scale-95 w-[10rem] opacity-80"}
+                        `}>
+                        <div className='bg-[#f8f3d981] rounded-xl'>
+                            <div className='mt-[-3rem]' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                                 <img src={imgPath} alt={name} className='w-full h-full object-contain' />
                             </div>
                         </div>
@@ -26,16 +46,20 @@ const Strawberrysection = () => {
                         </div>
                         <div>
                             <div className='mt-4'>
-                                <button className='mb-[-20px] px-5 py-1 rounded-full cursor-pointer bg-black text-white font-mona text-sm '>
+                                <a className='mb-[-20px] px-5 py-1 rounded-full cursor-pointer bg-black text-white font-mona text-sm '>
                                     Buy Now
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
+
+            <button onClick={() => scroll('?')} className="bg-[#541212] z-10 text-white p-2 mx-5 rounded-full hidden lg:flex cursor-pointer">
+                <img src='/images/right.png' alt='left' className='w-4' />
+            </button>
         </section>
-  )
+    )
 }
 
-export default Strawberrysection
+export default StrawberrySection

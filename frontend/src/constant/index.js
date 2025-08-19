@@ -102,6 +102,36 @@ const strawberry = [
         imgPath : "/images/milkshake/strawberry/1.png",
         price : 200
     },
+    {
+        name : "Chocolate Milkshake",
+        desc : "Lorem ipsum dolor ",
+        imgPath : "/images/milkshake/strawberry/1.png",
+        price : 200
+    },
+    {
+        name : "Chocolate Milkshake",
+        desc : "Lorem ipsum dolor ",
+        imgPath : "/images/milkshake/strawberry/1.png",
+        price : 200
+    },
+    {
+        name : "Chocolate Milkshake",
+        desc : "Lorem ipsum dolor ",
+        imgPath : "/images/milkshake/strawberry/1.png",
+        price : 200
+    },
+    {
+        name : "Chocolate Milkshake",
+        desc : "Lorem ipsum dolor ",
+        imgPath : "/images/milkshake/strawberry/1.png",
+        price : 200
+    },
+    {
+        name : "Chocolate Milkshake",
+        desc : "Lorem ipsum dolor ",
+        imgPath : "/images/milkshake/strawberry/1.png",
+        price : 200
+    },
 ]
 
 
