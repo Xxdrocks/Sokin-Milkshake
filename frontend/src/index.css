@@ -79,17 +79,19 @@ body {
 }
 
 .chocobg {
-  background-color: antiquewhite;
+  background-color: white;
   background-image: url("/images/choco.png");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 
 .strawbg {
-  background-color: antiquewhite;
+  margin-top: 70px;
+  background-color: white;
   background-image: url("/images/strawberry.png");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }

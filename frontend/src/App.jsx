@@ -5,6 +5,7 @@ import ChocolateSection from './section/ChocolateSection'
 import Strawberrysection from './section/Strawberrysection'
 import Contact from './section/Contact'
 import Banner from './components/Banner'
+import MilkPreview from './Models/MilkPreview'
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <Banner />
+      <MilkPreview />
       <ChocolateSection />
       <Strawberrysection />
       <Contact />

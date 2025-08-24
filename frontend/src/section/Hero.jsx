@@ -1,4 +1,8 @@
+import { Canvas } from '@react-three/fiber'
 import React from 'react'
+import { Milk } from '../Models/Milk'
+import { AmbientLight } from 'three'
+import { OrbitControls } from '@react-three/drei'
 
 const Hero = () => {
   return (
@@ -22,8 +26,16 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className='md:w-5/11 h-auto' data-aos="fade-left" data-aos-duration="1200" data-aos-offset="300">
-          <img src='/images/milkshake/header.png' alt='hero' />
+        <div className='absolute right-0 w-7/12 h-dvh' data-aos="fade-left" data-aos-duration="1200" data-aos-offset="300">
+         <Canvas camera={{ fov: 10, position: [50,-65,80] }} >
+          <ambientLight intensity={3} />
+          <OrbitControls
+            enablePan={false}
+            enableZoom={true}
+            enableRotate={true}
+          />
+          <Milk scale={1} />
+         </Canvas>
         </div>
       </div>
     

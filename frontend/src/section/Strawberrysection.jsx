@@ -18,7 +18,7 @@ const ChocolateSection = () => {
 
     return (
         <section className='strawbg' id='products'>
-            <div className='flex justify-center items-center text-red-600 font-poppins font-bold text-4xl pt-15'>
+            <div className='flex justify-center items-center text-red-600 font-poppins font-bold text-4xl '>
                 <h1>
                     "Strawberry"
                 </h1>
