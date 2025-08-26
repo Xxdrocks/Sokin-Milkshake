@@ -3,6 +3,8 @@ import React from 'react'
 import { Milk } from '../Models/Milk'
 import { AmbientLight } from 'three'
 import { OrbitControls } from '@react-three/drei'
+import Banner from '../components/Banner'
+import MilkPreview from '../Models/MilkPreview'
 
 const Hero = () => {
   return (
@@ -26,6 +28,8 @@ const Hero = () => {
             </button>
           </div>
         </div>
+
+        
         <div className='absolute right-0 w-7/12 h-dvh' data-aos="fade-left" data-aos-duration="1200" data-aos-offset="300">
          <Canvas camera={{ fov: 10, position: [50,-65,80] }} >
           <ambientLight intensity={3} />
@@ -38,11 +42,9 @@ const Hero = () => {
          </Canvas>
         </div>
       </div>
-    
-    
 
-
-
+      <Banner/>
+      <MilkPreview/>
     </section>
   )
 }
