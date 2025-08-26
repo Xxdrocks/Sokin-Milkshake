@@ -17,13 +17,13 @@ const ChocolateSection = () => {
     const [isClicked, setIsClicked] = useState(null);
 
     return (
-        <section className='strawbg' id='products'>
+        <section data-aos="fade" data-aos-duration="1000" className='strawbg' id='products'>
             <div className='flex justify-center items-center text-red-600 font-poppins font-bold text-4xl '>
                 <h1>
                     "Strawberry"
                 </h1>
             </div>
-            <div  className='flex flex-row justify-center h-screen items-center'>
+            <div className='flex flex-row justify-center h-screen items-center'>
                 <button onClick={() => scroll('left')} className="bg-[#FF6363] z-10 text-white p-2 mx-5 rounded-full lg:flex hidden cursor-pointer">
                     <img src='/images/left.png' alt='left' className='w-4' />
                 </button>

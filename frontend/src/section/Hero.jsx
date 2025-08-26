@@ -23,7 +23,7 @@ const Hero = () => {
             </div>
           </div>
           <div data-aos="fade-right" data-aos-duration="1200">
-            <button className='w-1/4 mt-5 md:p-1 text-xl rounded-full text-white glassy cursor-pointer button font-semibold'>
+            <button onClick={() => window.location.href = '#products'} className='w-1/4 mt-5 md:p-1 text-xl rounded-full text-white glassy cursor-pointer button font-semibold'>
               Explore now
             </button>
           </div>

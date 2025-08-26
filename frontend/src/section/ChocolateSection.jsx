@@ -17,7 +17,7 @@ const ChocolateSection = () => {
     const [isClicked, setIsClicked] = useState(null);
 
     return (
-        <section className=' chocobg' id='products'>
+        <section data-aos="fade" data-aos-duration="1000" className=' chocobg' id='products'>
             <div className='flex justify-center text-amber-950 font-poppins font-bold text-4xl pt-15'>
                 <h1>
                     "Chocolate"

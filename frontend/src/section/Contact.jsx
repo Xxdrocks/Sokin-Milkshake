@@ -53,17 +53,21 @@ const Contact = () => {
 
 
     return (
-        <section id="contact" className="flex justify-center items-center">
-            <div data-aos="fade-right" data-aos-duration="900" className="w-full h-full md:px-10 px-5 mt-50">
-                <div className=" bg-[#FFF5F2] text-black py-8 px-6 rounded-lg max-w-xl">
+        <section id="contact" className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100">
+            <div
+                data-aos="fade-right"
+                data-aos-duration="900"
+                className="w-full md:w-1/2 flex justify-center p-6"
+            >
+                <div className="bg-white/70 backdrop-blur-xl shadow-xl text-gray-800 py-10 px-8 rounded-2xl max-w-lg w-full border border-white/30">
                     <form
                         ref={formRef}
                         onSubmit={handleSubmit}
                         className="w-full flex flex-col gap-6"
                     >
                         <div className="flex flex-col gap-2">
-                            <label htmlFor="name" className="text-sm font-medium">
-                                Your name
+                            <label htmlFor="name" className="text-sm font-medium text-gray-600">
+                                Your Name
                             </label>
                             <input
                                 type="text"
@@ -73,12 +77,11 @@ const Contact = () => {
                                 onChange={handleChange}
                                 placeholder="What's your good name?"
                                 required
-                                className="text-black placeholder:text-gray-400 px-4 py-3 rounded-lg outline-none border  border-[#F5BABB] transition-all"
+                                className="text-black placeholder:text-gray-400 px-4 py-3 rounded-xl outline-none border border-pink-200 focus:ring-2 focus:ring-pink-300 transition-all"
                             />
                         </div>
-
                         <div className="flex flex-col gap-2">
-                            <label htmlFor="email" className="text-sm font-medium">
+                            <label htmlFor="email" className="text-sm font-medium text-gray-600">
                                 Your Email
                             </label>
                             <input
@@ -89,12 +92,11 @@ const Contact = () => {
                                 onChange={handleChange}
                                 placeholder="What's your email address?"
                                 required
-                                className=" text-black placeholder:text-gray-400 px-4 py-3 rounded-lg outline-none border border-[#F5BABB] transition-all"
+                                className="text-black placeholder:text-gray-400 px-4 py-3 rounded-xl outline-none border border-pink-200 focus:ring-2 focus:ring-pink-300 transition-all"
                             />
                         </div>
-
                         <div className="flex flex-col gap-2">
-                            <label htmlFor="message" className="text-sm font-medium">
+                            <label htmlFor="message" className="text-sm font-medium text-gray-600">
                                 Your Message
                             </label>
                             <textarea
@@ -105,14 +107,13 @@ const Contact = () => {
                                 placeholder="How can I help you?"
                                 required
                                 rows="4"
-                                className=" text-black placeholder:text-gray-400 px-4 py-3 rounded-lg outline-none border border-[#F5BABB]  transition-all resize-none"
+                                className="text-black placeholder:text-gray-400 px-4 py-3 rounded-xl outline-none border border-pink-200 focus:ring-2 focus:ring-pink-300 transition-all resize-none"
                             />
                         </div>
-
                         <button
                             type="submit"
                             disabled={loading}
-                            className="bg-[#F5BABB] text-black font-semibold py-3 rounded-lg hover:bg-[#fba4a6] transition-all"
+                            className="bg-gradient-to-r from-pink-400 to-pink-500 text-white font-semibold py-3 rounded-xl shadow-md hover:scale-105 transition-transform"
                         >
                             {loading ? "Sending..." : "SEND MESSAGE"}
                         </button>
@@ -120,14 +121,20 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="300"w className="w-full h-full">
+            <div
+                data-aos="fade-left"
+                data-aos-duration="900"
+                data-aos-delay="300"
+                className="w-full md:w-1/2 flex justify-center"
+            >
                 <img
                     src="/images/milkshake/header.png"
                     alt="contact"
-                    className="w-full h-full object-cover"
+                    className=" object-contain drop-shadow-2xl"
                 />
             </div>
         </section>
+
 
     );
 };

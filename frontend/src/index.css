@@ -46,7 +46,7 @@ body {
 }
 
 .button {
-  background: linear-gradient(to right, #235599, rgb(157, 185, 255));
+  background: linear-gradient(to right, #235599, #9db9ff);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }

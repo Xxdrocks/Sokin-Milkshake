@@ -7,7 +7,7 @@ import { Milk } from "./Milk";
 const MilkPreview = () => {
     return (
         <div className="flex justify-center items-center h-screen w-screen">
-            <div ata-aos-duration="1000" data-aos="fade-left" className="h-screen w-1/2 flex justify-center">
+            <div data-aos-duration="1200" data-aos="fade-left" className="h-screen w-1/2 flex justify-center z-10">
                 <Canvas camera={{ fov: 20, position: [30, -35, 30] }}>
                     <ambientLight intensity={3} />
                     <directionalLight position={[0, 30, 0]} intensity={2} />
@@ -16,11 +16,11 @@ const MilkPreview = () => {
                 </Canvas>
             </div>
 
-            <div data-aos="fade-right" data-aos-duration="1000" className="w-1/2 flex-col text-left flex justify-center items-start">
-                <h1 className="text-3xl font-poppins font-normal">
+            <div className="w-1/2 flex-col text-left flex justify-center items-start">
+                <h1 data-aos="fade-right"  data-aos-duration="1000" className="text-3xl font-poppins font-semibold">
                     Pure Taste, Premium Quality
                 </h1>
-                <p className="w-1/2">
+                <p data-aos="fade-right"  data-aos-duration="1200" className="w-1/2">
                     Setiap detail dihadirkan dengan ketelitian, dari bahan pilihan hingga proses terbaik,
                     untuk pengalaman rasa istimewa yang tak tergantikan.
                 </p>

@@ -6,6 +6,7 @@ import Strawberrysection from './section/Strawberrysection'
 import Contact from './section/Contact'
 import Banner from './components/Banner'
 import MilkPreview from './Models/MilkPreview'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <ChocolateSection />
       <Strawberrysection />
       <Contact />
+      <Footer />
     </div>
   )
 }
